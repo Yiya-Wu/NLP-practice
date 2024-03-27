@@ -29,7 +29,9 @@ def extract_verb(sentence):
     if 'を' in parts[1]:
         verb = parts[1].split('を')[1] 
     elif 'に' in parts[1]:
-        verb = parts[1].split('に')[1]  
+        verb = parts[1].split('に')[1]
+    elif 'ます' in parts[1]:
+        verb = parts[1].split('ます')[0]
     else:
         return "未找到動詞"
     verb_stem = verb.split('ます')[0]  
