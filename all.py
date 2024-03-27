@@ -32,5 +32,5 @@ def extract_obj(sentence):
     return obj
     
 
-for sentence in LIST:
-    print(f"{sentence}\nsubject:{extract_sujb(sentence)}\nobject:{extract_obj(sentence)}\nverb:{extract_v(sentence)}")     
+for sentence in L:
+    print(f"{sentence}\nsubject:{extract_subj(sentence)}\nobject:{extract_obj(sentence)}\nverb:{extract_v(sentence)}\n")     
