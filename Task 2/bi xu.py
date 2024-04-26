@@ -18,7 +18,6 @@ def process(raw):
             #選取含有"必須"的片段，並append到processed lsit
             if "必須" in part:
                 processed.append(part)
-            if "「
     #轉成集合已刪除重複句，再轉回list
     processed = list(set(processed))
     return processed
@@ -34,7 +33,6 @@ def save(processed):
         sentence = [f'{s}\n' for s in processed]
         fh.writelines(sentence)
         
-
                 
 
 raw_list = inputList()
