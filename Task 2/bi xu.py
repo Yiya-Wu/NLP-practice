@@ -26,7 +26,7 @@ def process2(raw):
     processed = []
     for line in raw:
         if "必須" in line:
-            p = "。,，！？；"
+            p = '，|。|！|？|；'
             pattern = f"([^{p}]*必須[^{p}]*)"
             matches = re.findall(pattern, line)
             for match in matches:
@@ -46,6 +46,7 @@ def save(processed):
         fh.writelines(sentence)
         
                 
+
 
 raw_list = inputList()
 processed_list = process(raw_list)
