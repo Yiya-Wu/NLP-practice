@@ -5,6 +5,7 @@ def extract_subj(sentence):
     sm = sentence.index('が')
     subj = sentence[0:sm]
     return subj
+
 def extract_v(sentence):  
     sentence = sentence.replace("ます。", "")
     sm = sentence.index('が')

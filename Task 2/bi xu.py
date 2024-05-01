@@ -21,6 +21,18 @@ def process(raw):
     #轉成集合已刪除重複句，再轉回list
     processed = list(set(processed))
     return processed
+
+def process2(raw):
+    processed = []
+    for line in raw:
+        if "必須" in line:
+            p = "。,，！？；"
+            pattern = f"[{p}]([^{p}]*必須[^{p}]*)[{p}]"
+            matches = re.findall(pattern, line)
+            for match in matches:
+                processed.append(match)
+    processed = list(set(processed))
+    return processed
     
 #呈現processed list
 def show(processed):
