@@ -27,7 +27,7 @@ def process2(raw):
     for line in raw:
         if "必須" in line:
             p = "。,，！？；"
-            pattern = f"[{p}]([^{p}]*必須[^{p}]*)[{p}]"
+            pattern = f"([^{p}]*必須[^{p}]*)"
             matches = re.findall(pattern, line)
             for match in matches:
                 processed.append(match)
